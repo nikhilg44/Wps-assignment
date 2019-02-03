@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+.active, .accordion:hover {
+  background-color: #ccc; 
+}
+
+.panel {
+  padding: 0 18px;
+  display: none;
+  background-color: white;
+  overflow: hidden;
+}
+</style>
+</head>
+<body>
+
+<h2>FAQ's</h2>
+
+<button class="accordion">What is the purpose and objectives of Grievance Redressal platform portal?</button>
+<div class="panel">
+  <pre>Purpose: The portal has been created to provide convenience to citizens of the state by allowing them to lodge
+ a grievance through their mobile phones or computers. This removes the need for them to appear at any location
+ and file a physical grievance. In addition, it provides them the facility of tracking the live status of
+ their complaint, and providing feedback based on their satisfaction with the resolution. The system also 
+ allows the Chief Minister’s Office (CMO) to closely track all lodged grievances, and ensure that corrective 
+ action is taken in each case.
+
+Objective: The objective of the portal is to ensure speedy, convenient and effective redressal of citizen issues by the administration.</pre>
+</div>
+
+<button class="accordion">What kind of grievances can I post ?</button>
+<div class="panel">
+  <pre>Any grievances relating to the functioning of the Government offices in the State can be filed. The grievance 
+  could be policy related (Mantralaya Level) or field related (District Level).</pre>
+</div>
+
+<button class="accordion">What are the types of grievances that are not taken up for redressal by the portal?</button>
+<div class="panel">
+  <pre>(a) Sub-judice cases or any matter awaiting judgment from any court,
+
+(b) Personal and family disputes that were not raised with the proper authority at block, district or sub-divisional level, and
+
+(c) RTI related matters.</pre>
+</div>
+<button class="accordion">What are the different levels of administration at which I can file a grievance ?</button>
+<div class="panel">
+  <pre>Currently, grievances can be filed at 2 levels of administration - namely District Level & Mantralaya Level.</pre>
+</div>
+<button class="accordion">What is the meaning of 'Nature of Grievance'?</button>
+<div class="panel">
+  <pre>This is the subject/area that your grievance relates to. It has already been compiled for each administration type / department and are available in dropdown.</pre>
+</div>
+<button class="accordion">Within how many days will my grievance be resolved ?</button>
+<div class="panel">
+  <pre>Grievances are expected to be resolved within 21 days.</pre>
+</div>
+
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+</script>
+
+</body>
+</html>
